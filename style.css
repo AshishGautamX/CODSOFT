@@ -25,7 +25,7 @@ body {
     color: white;
 }
 #bar {
-    position: fixed;
+    position: relative;
     margin-right: 5%;
     display: flex;
     width: 100%;
@@ -143,10 +143,15 @@ main {
     
 
 }
-#projects {
+.projects {
     margin-left: 79.5px;
 }
-#projects h1 {
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+.projects h1 {
     color: rgb(255, 162, 0);
 }
 
@@ -162,4 +167,50 @@ main {
 
 #contact h1 {
     color:rgb(255, 162, 0);
+}
+
+.card {
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    margin: 10px;
+    background-color: #FAFAFA;
+    border: 2px solid #0cabea; 
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+}
+
+.card-image img {
+    width: 363px;
+    height: 167px;
+    object-fit:contain;
+}
+
+.card-content {
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1F3A46;
+    padding: 0;
+}
+
+.card-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #1F3A46;
+    font-weight: 400;
 }
